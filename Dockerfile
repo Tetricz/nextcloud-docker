@@ -10,7 +10,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 
 RUN install-php-extensions ffi
 
-CMD busybox crond -f -l 0 -L /dev/stdout
+CMD ["/cron.sh"]
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
