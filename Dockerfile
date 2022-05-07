@@ -3,9 +3,11 @@
 
 FROM nextcloud:latest
 
-RUN apt-get update && apt-get install libfuse2
+RUN apt-get update && apt-get install libfuse2 libmagickcore-6.q16-6-extra
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 RUN chmod +x /usr/local/bin/install-php-extensions
 
 RUN install-php-extensions ffi
+
+CMD busybox crond -b
