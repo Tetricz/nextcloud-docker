@@ -11,5 +11,5 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 RUN install-php-extensions ffi
 
 ADD ./custom-entry.sh /custom-entry.sh
-
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash", "/custom-entry.sh"]
