@@ -10,4 +10,4 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 
 RUN install-php-extensions ffi
 
-CMD /cron.sh
+CMD busybox crond -b
