@@ -10,7 +10,5 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 
 RUN install-php-extensions ffi
 
-CMD ["/cron.sh"]
-
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["apache2-foreground"]
+CMD ["sh", "-c", "apache2-foreground && /cron.sh"]
