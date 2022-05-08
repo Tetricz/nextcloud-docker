@@ -9,7 +9,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions
 
 RUN install-php-extensions ffi
-RUN touch /usr/local/etc/php/php.ini && echo "ffi.enable=true" > /usr/local/etc/php/php.ini
+RUN echo "ffi.enable=true" > /usr/local/etc/php/conf.d/ffi.ini
 
 ADD ./custom-entry.sh /custom-entry.sh
 ENTRYPOINT ["/entrypoint.sh"]
