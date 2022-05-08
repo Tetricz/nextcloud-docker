@@ -1,7 +1,7 @@
 # Maintainer https://github.com/Tetricz
 # https://hub.docker.com/_/nextcloud
-
-FROM nextcloud:latest
+ARG NC_VERSION=latest
+FROM nextcloud:${NC_VERSION}
 
 RUN apt-get update && apt-get install libfuse2 libmagickcore-6.q16-6-extra -y
 
