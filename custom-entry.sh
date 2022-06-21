@@ -1,4 +1,4 @@
 #!/bin/bash
-/entrypoint.sh
 busybox crond -b
-apache2-foreground
+apache2-foreground &
+/entrypoint.sh
