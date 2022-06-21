@@ -13,5 +13,5 @@ RUN install-php-extensions ffi imagick smbclient
 RUN echo "ffi.enable=true" > /usr/local/etc/php/conf.d/ffi.ini
 
 ADD ./custom-entry.sh /custom-entry.sh
-ENTRYPOINT ["/entrypoint.sh"]
+# ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash", "/custom-entry.sh"]
