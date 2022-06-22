@@ -12,6 +12,7 @@ RUN install-php-extensions ffi imagick smbclient
 
 RUN echo "ffi.enable=true" > /usr/local/etc/php/conf.d/ffi.ini
 RUN echo "busybox crond -b" >> /entrypoint.sh
+RUN echo "echo test" >> /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
