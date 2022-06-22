@@ -26,7 +26,7 @@ Example script:
 #!/bin/bash
 if [ -f "/var/run/dockerd.pid" ]; then
     echo "Docker is running.... Checking on Nextcloud container"
-    if [ "$(docker ps -q -f name=Nextcloud | grep Nextcloud)" ]; then
+    if [ "$(docker ps -q -f name=Nextcloud | grep tetricz/nextcloud)" ]; then
         echo "Container is running. Executing cron"
         docker exec -u www-data Nextcloud php cron.php
     else
