@@ -5,7 +5,6 @@ This is a simple nextcloud container based off the official docker image, but wi
 ## Built-in dependencies for apps
 
 * php-ffi: storj external
-* libfuse2: Built-In CODE
 * smbclient
 
 ## Planned added dependencies
